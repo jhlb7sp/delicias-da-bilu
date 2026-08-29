@@ -3,30 +3,110 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Delícias da Bilu | Geladinhos Gourmet &amp; Personal Chef</title>
+    <title>Delícias da Bilu | Geladinhos Gourmet e Personal Chef</title>
     <meta
       name="description"
-      content="Geladinhos gourmet deliciosos e serviço de personal chef. Conheça os sabores e faça seu pedido pelo WhatsApp."
+      content="Delícias da Bilu: geladinhos gourmet, serviço de personal chef e e-books de receitas. Veja o cardápio, conheça os e-books e fale pelo WhatsApp: (11) 95789-1276."
     />
+    <meta name="author" content="Delícias da Bilu" />
     <meta name="theme-color" content="#d82968" />
     <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://jhlb7sp.github.io/delicias-da-bilu/" />
     <link rel="icon" href="logo-delicias-da-bilu.png" />
+    <link rel="apple-touch-icon" href="logo-delicias-da-bilu.png" />
     <link rel="stylesheet" href="styles.css" />
+    <style>
+      .ebooks-section { position: relative; overflow: hidden; background: linear-gradient(180deg,#fffaf7 0%,#faede8 100%); }
+      .ebooks-section::before { position: absolute; top: -180px; right: -140px; width: 420px; height: 420px; border: 1px solid rgba(216,41,104,.12); border-radius: 50%; content: ""; }
+      .ebooks-grid { position: relative; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 22px; max-width: 1420px; margin: 58px auto 0; }
+      .ebook-card { position: relative; display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid rgba(111,38,53,.1); border-radius: 30px; background: rgba(255,255,255,.88); box-shadow: 0 18px 55px rgba(111,38,53,.08); transition: transform 180ms ease, box-shadow 180ms ease; }
+      .ebook-card:hover { box-shadow: 0 25px 65px rgba(111,38,53,.15); transform: translateY(-6px); }
+      .ebook-card.featured { border-color: rgba(216,41,104,.34); }
+      .ebook-highlight { position: absolute; z-index: 2; top: 16px; right: 16px; padding: 8px 12px; border-radius: 999px; background: var(--raspberry); color: #fff; font-size: 10px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; box-shadow: 0 8px 20px rgba(216,41,104,.3); }
+      .ebook-cover { display: block; aspect-ratio: 4 / 5; overflow: hidden; background: var(--cream-deep); }
+      .ebook-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform 350ms ease; }
+      .ebook-card:hover .ebook-cover img { transform: scale(1.025); }
+      .ebook-content { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 27px 25px 25px; }
+      .ebook-eyebrow { color: var(--raspberry); font-size: 10px; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+      .ebook-content h3 { margin: 9px 0 0; color: var(--wine); font-family: var(--display); font-size: clamp(25px,2vw,31px); line-height: 1.05; letter-spacing: -.025em; }
+      .ebook-subtitle { display: block; margin-top: 5px; color: var(--gold); font-family: var(--display); font-size: 17px; font-style: italic; }
+      .ebook-content p { margin: 16px 0 18px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+      .ebook-safe { margin-top: auto; color: #8c777d; font-size: 10px; font-weight: 700; }
+      .ebook-button { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; min-height: 50px; margin-top: 18px; padding: 0 17px; border-radius: 15px; background: var(--wine); color: #fff; font-size: 12px; font-weight: 900; transition: background 180ms ease, transform 180ms ease; }
+      .ebook-button:hover { background: var(--raspberry); transform: translateY(-2px); }
+      .ebook-button svg { width: 17px; height: 17px; }
+      @media (max-width: 1100px) { .ebooks-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+      @media (max-width: 620px) {
+        .ebooks-grid { grid-template-columns: 1fr; gap: 20px; margin-top: 42px; }
+        .ebook-card { max-width: 430px; width: 100%; margin: 0 auto; }
+        .ebook-content { padding: 25px 23px 23px; }
+      }
+    </style>
+
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Delícias da Bilu" />
-    <meta property="og:description" content="Geladinhos gourmet — sabor que refresca e conquista!" />
-    <meta property="og:image" content="https://delicias-da-bilu.jhb7sp.chatgpt.site/og.png" />
+    <meta property="og:site_name" content="Delícias da Bilu" />
+    <meta property="og:title" content="Delícias da Bilu | Geladinhos Gourmet e Personal Chef" />
+    <meta property="og:description" content="Geladinhos gourmet, serviço de personal chef e e-books de receitas para levar mais sabor à sua rotina." />
+    <meta property="og:url" content="https://jhlb7sp.github.io/delicias-da-bilu/" />
+    <meta property="og:image" content="https://jhlb7sp.github.io/delicias-da-bilu/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Delícias da Bilu — Geladinhos Gourmet" />
+
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Delícias da Bilu | Geladinhos Gourmet e Personal Chef" />
+    <meta name="twitter:description" content="Veja os sabores, conheça nossos e-books de receitas e faça seu pedido pelo WhatsApp." />
+    <meta name="twitter:image" content="https://jhlb7sp.github.io/delicias-da-bilu/og.png" />
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "FoodEstablishment",
+        "@id": "https://jhlb7sp.github.io/delicias-da-bilu/#empresa",
         "name": "Delícias da Bilu",
-        "description": "Geladinhos gourmet e serviço de personal chef.",
-        "telephone": "+55 11 95789-1276",
-        "sameAs": ["https://www.instagram.com/delicias_da_bilu_gourmet"],
-        "priceRange": "R$"
+        "alternateName": "Delícias da Bilu Gourmet",
+        "url": "https://jhlb7sp.github.io/delicias-da-bilu/",
+        "logo": "https://jhlb7sp.github.io/delicias-da-bilu/logo-delicias-da-bilu.png",
+        "image": "https://jhlb7sp.github.io/delicias-da-bilu/og.png",
+        "description": "Geladinhos gourmet cremosos, feitos com ingredientes selecionados, e serviço de personal chef para refeições e marmitas da semana.",
+        "telephone": "+5511957891276",
+        "priceRange": "R$ 3–R$ 7",
+        "servesCuisine": ["Geladinhos gourmet", "Sobremesas", "Comida caseira"],
+        "areaServed": {
+          "@type": "City",
+          "name": "São Paulo"
+        },
+        "hasMenu": "https://jhlb7sp.github.io/delicias-da-bilu/#sabores",
+        "hasMap": "https://share.google/t9rxM5WUOpMpUmGx2",
+        "sameAs": [
+          "https://share.google/t9rxM5WUOpMpUmGx2",
+          "https://www.instagram.com/delicias_da_bilu_gourmet"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+5511957891276",
+          "contactType": "customer service",
+          "availableLanguage": "Portuguese"
+        },
+        "potentialAction": {
+          "@type": "OrderAction",
+          "target": "https://wa.me/5511957891276"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "E-books de receitas da Delícias da Bilu",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "item": { "@type": "Book", "bookFormat": "https://schema.org/EBook", "inLanguage": "pt-BR", "name": "Marmitas Fitness Econômicas", "url": "https://pay.hotmart.com/Y107362168D", "image": "https://hotmart.s3.amazonaws.com/product_pictures/1be098df-7bc6-4bb7-9dee-560dacb13bb9/capa_marmita.png" } },
+          { "@type": "ListItem", "position": 2, "item": { "@type": "Book", "bookFormat": "https://schema.org/EBook", "inLanguage": "pt-BR", "name": "Geladinhos Gourmet – Receitas para Fazer e Vender", "url": "https://pay.hotmart.com/M107362481L", "image": "https://hotmart.s3.amazonaws.com/product_pictures/100a0258-d823-414a-954f-8b7544c73c91/a2acd4b09f214393b1e4e7ec8c27852b.png" } },
+          { "@type": "ListItem", "position": 3, "item": { "@type": "Book", "bookFormat": "https://schema.org/EBook", "inLanguage": "pt-BR", "name": "Sabores do Brasil à Mesa", "url": "https://pay.hotmart.com/R107362566W", "image": "https://hotmart.s3.amazonaws.com/product_pictures/d7d62908-c6dc-4367-8ccf-94ab4165a173/ChatGPTImage27deagode202621_30_34.png" } },
+          { "@type": "ListItem", "position": 4, "item": { "@type": "Book", "bookFormat": "https://schema.org/EBook", "inLanguage": "pt-BR", "name": "Sabor em Forma – 45 Receitas Fitness", "url": "https://pay.hotmart.com/G107362666A", "image": "https://hotmart.s3.amazonaws.com/product_pictures/b2411a2f-a111-4b51-9af7-a8a512fdd732/6bdb9049188c44fd8c47ec74f0c2275a.png" } }
+        ]
       }
     </script>
   </head>
@@ -34,13 +114,14 @@
     <main>
       <header class="site-header">
         <a class="brand" href="#inicio" aria-label="Delícias da Bilu — início">
-          <img src="logo-delicias-da-bilu.png" alt="" />
+          <img src="logo-delicias-da-bilu.png" alt="Logo da Delícias da Bilu" />
           <span>Delícias da Bilu</span>
         </a>
         <nav class="desktop-nav" aria-label="Navegação principal">
           <a href="#sabores">Sabores</a>
           <a href="#personal-chef">Personal chef</a>
           <a href="#como-pedir">Como pedir</a>
+          <a href="#ebooks">E-books</a>
           <a href="#contato">Contato</a>
         </nav>
         <a
@@ -167,6 +248,66 @@
           <details><summary>Todos os sabores estão sempre disponíveis?</summary><p>A disponibilidade pode variar. Consulte a Bilu pelo WhatsApp para saber quais sabores estão prontos no dia.</p></details>
           <details><summary>Posso fazer um pedido em quantidade?</summary><p>Sim, entre em contato para consultar disponibilidade, prazo e condições do seu pedido.</p></details>
           <details><summary>Como contratar o serviço de personal chef?</summary><p>Chame no WhatsApp para combinar o cardápio, a data e os detalhes do atendimento na sua casa.</p></details>
+        </div>
+      </section>
+
+      <section class="ebooks-section section" id="ebooks">
+        <div class="section-heading centered">
+          <span class="section-kicker">Receitas para ter sempre com você</span>
+          <h2>Leve mais <em>sabor</em> para a sua cozinha.</h2>
+          <p>Conheça nossos e-books com receitas práticas, acessíveis e feitas para diferentes momentos da sua rotina.</p>
+        </div>
+        <div class="ebooks-grid">
+          <article class="ebook-card">
+            <a class="ebook-cover" href="https://pay.hotmart.com/Y107362168D" target="_blank" rel="noopener noreferrer" aria-label="Comprar o e-book Marmitas Fitness Econômicas na Hotmart">
+              <img src="https://hotmart.s3.amazonaws.com/product_pictures/1be098df-7bc6-4bb7-9dee-560dacb13bb9/capa_marmita.png" alt="Capa do e-book Marmitas Fitness Econômicas" loading="lazy" />
+            </a>
+            <div class="ebook-content">
+              <span class="ebook-eyebrow">Planejamento semanal</span>
+              <h3>Marmitas Fitness Econômicas</h3>
+              <p>Receitas práticas para organizar a semana, comer melhor e economizar sem abrir mão do sabor.</p>
+              <span class="ebook-safe">E-book digital • Compra segura pela Hotmart</span>
+              <a class="ebook-button" href="https://pay.hotmart.com/Y107362168D" target="_blank" rel="noopener noreferrer">Quero este e-book <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-5-5 5 5-5 5" /></svg></a>
+            </div>
+          </article>
+          <article class="ebook-card featured">
+            <span class="ebook-highlight">Escolha da Bilu</span>
+            <a class="ebook-cover" href="https://pay.hotmart.com/M107362481L" target="_blank" rel="noopener noreferrer" aria-label="Comprar o e-book Geladinhos Gourmet na Hotmart">
+              <img src="https://hotmart.s3.amazonaws.com/product_pictures/100a0258-d823-414a-954f-8b7544c73c91/a2acd4b09f214393b1e4e7ec8c27852b.png" alt="Capa do e-book Geladinhos Gourmet" loading="lazy" />
+            </a>
+            <div class="ebook-content">
+              <span class="ebook-eyebrow">Faça e venda</span>
+              <h3>Geladinhos Gourmet</h3>
+              <p>Receitas cremosas e ideias para transformar geladinhos gourmet em uma deliciosa fonte de renda.</p>
+              <span class="ebook-safe">E-book digital • Compra segura pela Hotmart</span>
+              <a class="ebook-button" href="https://pay.hotmart.com/M107362481L" target="_blank" rel="noopener noreferrer">Quero este e-book <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-5-5 5 5-5 5" /></svg></a>
+            </div>
+          </article>
+          <article class="ebook-card">
+            <a class="ebook-cover" href="https://pay.hotmart.com/R107362566W" target="_blank" rel="noopener noreferrer" aria-label="Comprar o e-book Sabores do Brasil à Mesa na Hotmart">
+              <img src="https://hotmart.s3.amazonaws.com/product_pictures/d7d62908-c6dc-4367-8ccf-94ab4165a173/ChatGPTImage27deagode202621_30_34.png" alt="Capa do e-book Sabores do Brasil à Mesa" loading="lazy" />
+            </a>
+            <div class="ebook-content">
+              <span class="ebook-eyebrow">Culinária brasileira</span>
+              <h3>Sabores do Brasil à Mesa</h3>
+              <p>Uma seleção de receitas populares para levar o melhor da comida brasileira à sua mesa.</p>
+              <span class="ebook-safe">E-book digital • Compra segura pela Hotmart</span>
+              <a class="ebook-button" href="https://pay.hotmart.com/R107362566W" target="_blank" rel="noopener noreferrer">Quero este e-book <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-5-5 5 5-5 5" /></svg></a>
+            </div>
+          </article>
+          <article class="ebook-card">
+            <a class="ebook-cover" href="https://pay.hotmart.com/G107362666A" target="_blank" rel="noopener noreferrer" aria-label="Comprar o e-book Sabor em Forma na Hotmart">
+              <img src="https://hotmart.s3.amazonaws.com/product_pictures/b2411a2f-a111-4b51-9af7-a8a512fdd732/6bdb9049188c44fd8c47ec74f0c2275a.png" alt="Capa do e-book Sabor em Forma – 45 Receitas Fitness" loading="lazy" />
+            </a>
+            <div class="ebook-content">
+              <span class="ebook-eyebrow">Vida saudável</span>
+              <h3>Sabor em Forma</h3>
+              <strong class="ebook-subtitle">45 Receitas Fitness</strong>
+              <p>Opções equilibradas e saborosas para variar o cardápio e cuidar da alimentação todos os dias.</p>
+              <span class="ebook-safe">E-book digital • Compra segura pela Hotmart</span>
+              <a class="ebook-button" href="https://pay.hotmart.com/G107362666A" target="_blank" rel="noopener noreferrer">Quero este e-book <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-5-5 5 5-5 5" /></svg></a>
+            </div>
+          </article>
         </div>
       </section>
 
